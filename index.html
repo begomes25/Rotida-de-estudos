@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Minha Rotina de Estudos</title>
+
+<style>
+  body {
+    font-family: Arial;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    text-align: center;
+  }
+
+  header {
+    background: #222;
+    color: white;
+    padding: 20px;
+  }
+
+  .tabs button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #fff;
+  }
+
+  .tabs button:hover {
+    background: #ddd;
+  }
+
+  .conteudo {
+    display: none;
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 85%;
+    border-radius: 15px;
+    text-align: left;
+  }
+
+  .ativo {
+    display: block;
+  }
+
+  li {
+    background: #f1f1f1;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  li[contenteditable] {
+    outline: none;
+  }
+</style>
+
+<script>
+function abrirDia(dia) {
+  let conteudos = document.querySelectorAll(".conteudo");
+  conteudos.forEach(c => c.classList.remove("ativo"));
+  document.getElementById(dia).classList.add("ativo");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+  <h1>📚 Minha Rotina de Estudos</h1>
+</header>
+
+<div class="tabs">
+  <button onclick="abrirDia('seg')">Segunda</button>
+  <button onclick="abrirDia('ter')">Terça</button>
+  <button onclick="abrirDia('qua')">Quarta</button>
+  <button onclick="abrirDia('qui')">Quinta</button>
+  <button onclick="abrirDia('sex')">Sexta</button>
+</div>
+
+<!-- SEGUNDA -->
+<div id="seg" class="conteudo ativo">
+  <h2>Segunda-feira</h2>
+
+  <h3>Português</h3>
+  <ul>
+    <li contenteditable="true">Enunciação: enunciador, enunciatário e enunciado</li>
+    <li contenteditable="true">Implícitos e pressupostos</li>
+    <li contenteditable="true">Teoria da comunicação e funções da linguagem</li>
+    <li contenteditable="true">Variação linguística</li>
+    <li contenteditable="true">Morfologia: substantivo</li>
+  </ul>
+</div>
+
+<!-- TERÇA -->
+<div id="ter" class="conteudo">
+  <h2>Terça-feira</h2>
+
+  <h3>Química 1</h3>
+  <ul>
+    <li contenteditable="true">Transformações de unidades</li>
+    <li contenteditable="true">Leis de Lavoisier e Proust</li>
+    <li contenteditable="true">Balanceamento de equações</li>
+    <li contenteditable="true">Mol e massa molar</li>
+  </ul>
+
+  <h3>Química 2</h3>
+  <ul>
+    <li contenteditable="true">Propriedades da matéria</li>
+    <li contenteditable="true">Separação de misturas</li>
+    <li contenteditable="true">Modelos atômicos</li>
+    <li contenteditable="true">Radioatividade</li>
+  </ul>
+</div>
+
+<!-- QUARTA -->
+<div id="qua" class="conteudo">
+  <h2>Quarta-feira</h2>
+
+  <h3>Geografia / Geologia</h3>
+  <ul>
+    <li contenteditable="true">Cartografia e curvas de nível</li>
+    <li contenteditable="true">Tempo geológico</li>
+    <li contenteditable="true">Rochas e ciclo das rochas</li>
+  </ul>
+</div>
+
+<!-- QUINTA -->
+<div id="qui" class="conteudo">
+  <h2>Quinta-feira</h2>
+
+  <h3>Física</h3>
+  <ul>
+    <li contenteditable="true">Movimento uniforme (D = v.t)</li>
+    <li contenteditable="true">S = S0 + v.t</li>
+    <li contenteditable="true">Velocidade média</li>
+    <li contenteditable="true">Gráficos</li>
+    <li contenteditable="true">MUV</li>
+    <li contenteditable="true">V = V0 + a.t</li>
+    <li contenteditable="true">d = V0.t + (a.t²)/2</li>
+    <li contenteditable="true">V² = V0² + 2.a.d</li>
+    <li contenteditable="true">Queda livre</li>
+    <li contenteditable="true">Vetores</li>
+    <li contenteditable="true">Velocidade relativa</li>
+    <li contenteditable="true">Lançamento horizontal</li>
+  </ul>
+</div>
+
+<!-- SEXTA -->
+<div id="sex" class="conteudo">
+  <h2>Sexta-feira</h2>
+
+  <h3>Literatura</h3>
+  <ul>
+    <li contenteditable="true">Livro: Campo Geral</li>
+  </ul>
+</div>
+
+</body>
+</html>
